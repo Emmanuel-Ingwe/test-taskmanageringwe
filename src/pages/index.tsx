@@ -47,7 +47,7 @@ export default function Home() {
                   type="submit"
                   className='bg-red-700 p-3 rounded m-1'
                   onClick={() => deleteTodo(index)}
-                  >del todo</button>
+                  >delete</button>
                 </li>
               ))}
             </ul>
