@@ -1,27 +1,28 @@
 import { Inter } from 'next/font/google'
-import { ReactEventHandler, useState } from 'react'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
-  const [todos, setTodos] = useState<string[]>([])
-  const [inputValue, setInputValue] = useState("")
-
+  const [todos, setTodos] = useState<string[]>([]);
+  const [inputValue, setInputValue] = useState("");
+  
   const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
   }
 
   const handleAddTodo = () => {
-    setTodos([...todos, inputValue])
-    setInputValue('')
-  }
+    if (inputValue.trim() !== '') {
+      setTodos([...todos, inputValue]);
+      setInputValue('');
+    }
+  };
 
-  const deleteTodo = () => {
-    const newTodo = [...todos.slice(0, index)]
-    setTodos(newTodo)
+  const deleteTodo = (index: number) => {
+      const updatedTodos = [...todos.slice(0, index), ...todos.slice(index + 1)];
+      setTodos(updatedTodos);
   }
-
 
 
   return (
@@ -39,13 +40,15 @@ export default function Home() {
             onClick={handleAddTodo}
             >add todo</button>
 
-            <ul className='flex flex-col items-center mt-5 justify-center bg-cyan-400 rounded p-3'>
+            <ul className='m-2 bg-cyan-400 rounded p-3'>
               {todos.map((todo, index) => (
-                <div className="flex w-[50%] items-center justify-between">
-                  <li key={index} className='text-2xl text-blue-950 bg-yellow-400 w-full p-2 rounded'>{todo}
-                  </li>
-                  <button onClick={deleteTodo} className='w-full bg-red-700 rounded p-3 m-2'>X</button>
-                </div>
+                <li className='flex items-center justify-between'>{todo}
+                  <button
+                  type="submit"
+                  className='bg-red-700 p-3 rounded m-1'
+                  onClick={() => deleteTodo(index)}
+                  >del todo</button>
+                </li>
               ))}
             </ul>
           </div>
@@ -54,19 +57,3 @@ export default function Home() {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// first, call out the usestates functions
-// then the addTodo function
-// the todoInput function
-// deleteTodo function
