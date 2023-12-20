@@ -42,7 +42,7 @@ export default function Home() {
 
             <ul className='m-2 bg-cyan-400 rounded p-3'>
               {todos.map((todo, index) => (
-                <li>{todo}
+                <li className='flex items-center justify-between'>{todo}
                   <button
                   type="submit"
                   className='bg-red-700 p-3 rounded m-1'
