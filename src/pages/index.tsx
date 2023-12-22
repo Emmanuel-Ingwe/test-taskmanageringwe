@@ -40,9 +40,9 @@ export default function Home() {
             onClick={handleAddTodo}
             >add todo</button>
 
-            <ul className='m-2 bg-cyan-400 rounded p-3'>
+            <ul className='t-2 bg-cyan-400 rounded p-3'>
               {todos.map((todo, index) => (
-                <li className='flex items-center justify-between'>{todo}
+                <li className='flex w-full items-center justify-between'>{todo}
                   <button
                   type="submit"
                   className='bg-red-700 p-3 rounded m-1'
