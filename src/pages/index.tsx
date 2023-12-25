@@ -17,7 +17,7 @@ const RedirectPage: React.FC = () => {
       // Use the Link component to navigate to the selected page
       return (
         <Link href={`/${selectedPage}`}>
-          <a>Go to {selectedPage}</a>
+          <Link href={selectedPage}>Go to {selectedPage}</Link>
         </Link>
       );
     }
@@ -25,16 +25,20 @@ const RedirectPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center mt-20'>
       <SnowfallComponent />
-      <label htmlFor="pageSelect">Select Page:</label>
-      <select id="pageSelect" onChange={handlePageChange}>
-        <option value="">Select</option>
-        <option value="page1">Page 1</option>
-        <option value="page2">Page 2</option>
+      <div className="">
+        <h1 className=" text-5xl tracking-widest animate-bounce">Merry Christmas</h1>
+      </div>
+      <label htmlFor="pageSelect">choose your Gender</label>
+      <select className=' outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
+        <option value="">Select &hearts;</option>
+        <option value="page1">Male</option>
+        <option value="page2">Female</option>
       </select>
 
-      {redirectToPage()}
+      
+      <h1>{redirectToPage()}</h1>
     </div>
   );
 };
