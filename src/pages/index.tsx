@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { useState } from 'react'
+import SnowfallComponent from '../../component/snowflake'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <>
       <section className='flex items-center justify-center mt-9'>
+      <SnowfallComponent />
         <div className="flex flex-col items-center justify-center">
           <div className="uppercase text-green-500 mb-10"><h1 className='text-2xl'>Todo App <span className='text-yellow-500'>2.0</span></h1></div>
 
