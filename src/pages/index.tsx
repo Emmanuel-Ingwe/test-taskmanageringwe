@@ -6,7 +6,7 @@ import ChildComponent from '../../component/ChildComponent'
 import { useRouter } from 'next/router';
 
 
-const RedirectPage: React.FC = ( ) => {
+const RedirectPage: React.FC = () => {
   const [selectedPage, setSelectedPage] = useState<string>('');
 
   const handlePageChange = (event: ChangeEvent<HTMLSelectElement>) => {
