@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google'
 import { useState, ChangeEvent } from 'react';
 import Link from 'next/link';
 import SnowfallComponent from '../../component/snowflake'

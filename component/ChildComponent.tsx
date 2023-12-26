@@ -22,7 +22,7 @@ interface InputComponentProps {
     <div className='flex flex-col'>
       <input type="text"  value={inputValue}
         onChange={handleInputChange} className='outline-none bg-gray-600 p-3 rounded-xl' placeholder='firstname or nickname' />
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}>enter</button>
     </div>
   )
 }
