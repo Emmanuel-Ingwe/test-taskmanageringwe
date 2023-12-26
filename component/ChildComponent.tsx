@@ -1,12 +1,12 @@
 import React from 'react'
-import { useState } from 'react';
+import { useInput } from "@/contexts/inputContext"
 
 interface InputComponentProps {
     onSubmit: (inputValue: string) => void;
   }
 
   const inputComponent:React.FC<InputComponentProps> = ({ onSubmit }) => {
-    const [inputValue, setInputValue] = useState('');
+    const { inputValue, setInputValue } = useInput();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setInputValue(event.target.value);

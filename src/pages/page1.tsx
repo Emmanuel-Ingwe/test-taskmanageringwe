@@ -1,21 +1,14 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import SnowfallComponent from '../../component/snowflake'
-import { useEffect, useState } from 'react';
+import { useInput } from "@/contexts/inputContext";
 
 
 type Props = {}
 
 const page1:React.FC = () => {
-    const router = useRouter();
-    const [submittedValue, setSubmittedValue] = useState<string | null>(null);
-
-    useEffect(() => {
-      const inputValue = router.query.inputValue;
-      if (inputValue && typeof inputValue === 'string') {
-        setSubmittedValue(inputValue);
-      }
-    }, [router.query.inputValue]);
+    const { inputValue } = useInput();
+    
 
 
   return (
@@ -23,7 +16,7 @@ const page1:React.FC = () => {
       <SnowfallComponent />
       <div className="">
         <h1 className="m-10 text-4xl font-bold tracking-wide animate-pulse text-green-600">Merry Christmas <span className='text-red-800'>Top G</span></h1>
-        {submittedValue && <p>Input value submitted: {submittedValue}</p>}
+        {inputValue && <p>Input value submitted: {inputValue}</p>}
       </div>
     </div>
   )

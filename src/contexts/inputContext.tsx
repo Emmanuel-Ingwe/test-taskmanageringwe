@@ -1,19 +1,15 @@
 // contexts/InputContext.tsx
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, ReactNode, useState } from 'react';
 
 interface InputContextProps {
   inputValue: string;
-  setInputValue: React.Dispatch<React.SetStateAction<string>>;
+  setInputValue: (value: string) => void;
 }
 
 const InputContext = createContext<InputContextProps | undefined>(undefined);
 
-interface InputProviderProps {
-  children: ReactNode;
-}
-
-export const InputProvider: React.FC<InputProviderProps> = ({ children }) => {
-  const [inputValue, setInputValue] = useState<string>('');
+export const InputProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <InputContext.Provider value={{ inputValue, setInputValue }}>
@@ -22,10 +18,10 @@ export const InputProvider: React.FC<InputProviderProps> = ({ children }) => {
   );
 };
 
-export const useInputContext = () => {
+export const useInput = () => {
   const context = useContext(InputContext);
   if (!context) {
-    throw new Error('useInputContext must be used within an InputProvider');
+    throw new Error('useInput must be used within an InputProvider');
   }
   return context;
 };
