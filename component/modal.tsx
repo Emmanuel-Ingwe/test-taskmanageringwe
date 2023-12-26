@@ -1,83 +1,88 @@
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 
-export default function MyModal() {
-  const [isOpen, setIsOpen] = useState(true);
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+}));
 
-  function closeModal() {
-    setIsOpen(false);
-  }
+function generateRandomText() {
+  const texts = [
+    "What you're grinding for, you shall get",
+    "Release what no longer serves you to make space for magic.",
+    "Leveling up in life is not a one-time event; it's a daily choice to grow and evolve.",
+    "Do not wait for leaders; do it alone, person to person.",
+    "Your fortune whispers of new friendships, exciting opportunities, and boundless creativity",
+    "Celebrate small victories; they lead to big accomplishments.",
+    "Seek joy in the ordinary, and you'll find the extraordinary.",
+    "Missed on those M's this year? well let's get it on the next!",
+    "2 lovely kids comming your way champ!",
+    "Write chapters of resilience, love, and self-discovery."
+  ];
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  return texts[randomIndex];
+}
 
-  function openModal() {
-    setIsOpen(true);
-  }
+export default function CustomizedDialogs() {
+  const [open, setOpen] = React.useState(false);
+  const [randomText, setRandomText] = React.useState('');
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setIsLoading(true);
+    setOpen(true);
+    setTimeout(() => {
+      setRandomText(generateRandomText());
+      setIsLoading(false);
+    }, 1600);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
-        >
-          Open dialog
-        </button>
-      </div>
-
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+    <React.Fragment>
+      <Button variant="outlined" onClick={handleClickOpen}>
+         Reveal Your 2024 Horizons
+      </Button>
+      <BootstrapDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 5,
+              color: (theme) => theme.palette.grey[500],
+            }}
           >
-            <div className="fixed inset-0 bg-black/25" />
-          </Transition.Child>
-
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Payment successful
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
-
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      Got it, thanks!
-                    </button>
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition>
-    </>
+            X
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          {isLoading ? (
+            <Typography variant="body1">_________________________</Typography>
+          ) : (
+            <Typography variant="body1">{randomText}</Typography>
+          )}
+        </DialogContent>
+      </BootstrapDialog>
+    </React.Fragment>
   );
 }

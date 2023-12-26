@@ -1,5 +1,7 @@
 import React from 'react'
 import SnowfallComponent from '../../component/snowflake'
+import Linear from "../../component/linear"
+import Modal from "../../component/modal"
 
 
 type Props = {}
@@ -11,7 +13,10 @@ const page1:React.FC = () => {
       <SnowfallComponent />
       <div className="">
         <h1 className="m-10 text-4xl font-bold tracking-wide animate-pulse text-green-600">Merry Christmas <span className='text-red-800'>Top G</span></h1>
-        <p>yo</p>
+        <Linear />
+        <div className="mt-11 flex items-center justify-center animate-bounce">
+         <Modal />
+        </div>
       </div>
     </div>
   )
