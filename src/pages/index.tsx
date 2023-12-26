@@ -3,14 +3,20 @@ import { useState, ChangeEvent } from 'react';
 import Link from 'next/link';
 import SnowfallComponent from '../../component/snowflake'
 import ChildComponent from '../../component/ChildComponent'
+import { useRouter } from 'next/router';
 
-const inter = Inter({ subsets: ['latin'] })
 
 const RedirectPage: React.FC = ( ) => {
   const [selectedPage, setSelectedPage] = useState<string>('');
 
   const handlePageChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedPage(event.target.value);
+  };
+
+  const router = useRouter();
+
+  const handleInputSubmit = (inputValue: string) => {
+    console.log(`Input value submitted in AnotherPage: ${inputValue}`);
   };
 
   const [inputValue, setInputValue] = useState<string>('');
@@ -33,7 +39,7 @@ const RedirectPage: React.FC = ( ) => {
         <h1 className=" text-3xl font-bold tracking-widest animate-bounce mb-16">Still with the Christmas spirit...</h1>
       </div>
       <div className="flex flex-col m-7">
-        <ChildComponent />
+        <ChildComponent onSubmit={handleInputSubmit}/>
       </div>
       <label htmlFor="pageSelect">Your Gender</label>
       <select className=' outline-none bg-black' id="pageSelect" onChange={handlePageChange}>

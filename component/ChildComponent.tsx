@@ -14,6 +14,7 @@ interface InputComponentProps {
   
     const handleSubmit = () => {
         onSubmit(inputValue);
+        setInputValue('')
       };
 
 
