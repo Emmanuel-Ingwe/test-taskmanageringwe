@@ -14,14 +14,6 @@ const RedirectPage: React.FC = ( ) => {
 
   const [inputValue, setInputValue] = useState<string>('');
 
-  const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleSubmit = () => {
-    onSubmit(inputValue);
-  };
-
   const redirectToPage = () => {
     if (selectedPage) {
       return (
@@ -49,11 +41,8 @@ const RedirectPage: React.FC = ( ) => {
 
 
       <div className="mt-10">
-        <label htmlFor="">enter</label>
+        
       </div>
-      <input type="text"  value={inputValue}
-        onChange={handleInputChange} className='outline-none bg-gray-600 p-3 rounded-xl' placeholder='firstname or nickname' />
-        <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
