@@ -15,11 +15,8 @@ const RedirectPage: React.FC = () => {
   const router = useRouter();
 
   const handleInputSubmit = (inputValue: string) => {
-    // Use Next.js router to navigate to AnotherPage with the input value as a query parameter
     window.location.href = `/page1?inputValue=${inputValue}`;
   };
-
-  const [inputValue, setInputValue] = useState<string>('');
 
   const redirectToPage = () => {
     if (selectedPage) {

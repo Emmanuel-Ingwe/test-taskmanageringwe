@@ -11,7 +11,6 @@ const page1:React.FC = () => {
     const [submittedValue, setSubmittedValue] = useState<string | null>(null);
 
     useEffect(() => {
-      // Retrieve the input value from the query parameters
       const inputValue = router.query.inputValue;
       if (inputValue && typeof inputValue === 'string') {
         setSubmittedValue(inputValue);
