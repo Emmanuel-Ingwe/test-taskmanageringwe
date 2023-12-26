@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 
-// interface inputComponentProps {
-//     inputValue: string;
-//   }
+interface InputComponentProps {
+    onSubmit: (inputValue: string) => void;
+  }
 
-  const inputComponent: React.FC = ({ onSubmit }) => {
+  const inputComponent:React.FC<InputComponentProps> = ({ onSubmit }) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -13,14 +13,12 @@ import { useState } from 'react';
     };
   
     const handleSubmit = () => {
-      // Call the onSubmit function with the input value
-      onSubmit(inputValue);
-    };
+        onSubmit(inputValue);
+      };
 
 
   return (
-    <div>
-        <label htmlFor="">enter</label>
+    <div className='flex flex-col'>
       <input type="text"  value={inputValue}
         onChange={handleInputChange} className='outline-none bg-gray-600 p-3 rounded-xl' placeholder='firstname or nickname' />
         <button onClick={handleSubmit}>Submit</button>

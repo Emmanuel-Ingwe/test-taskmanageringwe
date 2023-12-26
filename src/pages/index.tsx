@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import { useState, ChangeEvent } from 'react';
 import Link from 'next/link';
 import SnowfallComponent from '../../component/snowflake'
+import ChildComponent from '../../component/ChildComponent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,9 @@ const RedirectPage: React.FC = ( ) => {
       <div className="">
         <h1 className=" text-3xl font-bold tracking-widest animate-bounce mb-16">Still with the Christmas spirit...</h1>
       </div>
+      <div className="flex flex-col m-7">
+        <ChildComponent />
+      </div>
       <label htmlFor="pageSelect">Your Gender</label>
       <select className=' outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
         <option value="" className=''>Select &hearts;</option>
@@ -38,11 +42,6 @@ const RedirectPage: React.FC = ( ) => {
         <option value="page2">Female</option>
       </select>
       <h1 className='mt-3 font-semibold hover:text-red-800'>{redirectToPage()}</h1>
-
-
-      <div className="mt-10">
-        
-      </div>
     </div>
   );
 };
