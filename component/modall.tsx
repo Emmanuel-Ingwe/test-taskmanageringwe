@@ -65,7 +65,7 @@ export default function CustomizedDialogs() {
             sx={{
               position: 'absolute',
               right: 8,
-              top: 5,
+              top: 3,
               color: (theme) => theme.palette.grey[500],
             }}
           >

@@ -29,13 +29,14 @@ const RedirectPage: React.FC = () => {
       </div>
       <div className="flex flex-col m-7">
       </div>
-      <label htmlFor="pageSelect">Please select your field</label>
-      <select className=' outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
+      <label htmlFor="pageSelect" className='mb-3 text-lg text-cyan-100'>Please select gender</label>
+      <select className='text-xl outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
         <option value="" className=''>Select &hearts;</option>
         <option value="page1">Male</option>
         <option value="page2">Female</option>
+        <option value="pagee">Not here?</option>
       </select>
-      <h1 className='mt-3 font-semibold hover:text-red-800'>{redirectToPage()}</h1>
+      <h1 className='mt-3 text-xl font-bold underline hover:text-red-800'>{redirectToPage()}</h1>
     </div>
   );
 };
