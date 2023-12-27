@@ -3,7 +3,6 @@ import SnowfallComponent from '../../component/snowflake'
 import Linear from "../../component/linear"
 import Modal from "../../component/modal"
 
-
 type Props = {}
 
 const page1:React.FC = () => {
@@ -16,6 +15,19 @@ const page1:React.FC = () => {
         <Linear />
         <div className="mt-11 flex items-center justify-center animate-bounce">
          <Modal />
+        </div>
+      </div>
+
+      <div className="absolute bottom-0">
+        <div
+          className='bg-gay-900 text-xs flex flex-col items-center mb-2 justify-center font-semibold text-gray-700'>
+          <h4 className="text-gray-700">
+            {" "}
+            <small className='text-xs'> &copy; </small>2023
+          </h4>
+          <p>
+          Designed & created by E.i
+          </p>
         </div>
       </div>
     </div>
