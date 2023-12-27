@@ -36,7 +36,7 @@ const RedirectPage: React.FC = () => {
         <option value="page2">Female</option>
         <option value="pagee">Not here?</option>
       </select>
-      <h1 className='mt-3 text-xl font-bold underline hover:text-red-800'>{redirectToPage()}</h1>
+      <h1 className='mt-3 text-xl font-bold underline text-red-300 hover:text-red-800'>{redirectToPage()}</h1>
     </div>
   );
 };

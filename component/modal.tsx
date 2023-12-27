@@ -68,7 +68,7 @@ export default function CustomizedDialogs() {
             sx={{
               position: 'absolute',
               right: 8,
-              top: 3,
+              top: 4,
               color: (theme) => theme.palette.grey[500],
             }}
           >
@@ -79,7 +79,9 @@ export default function CustomizedDialogs() {
           {isLoading ? (
             <Typography variant="body1">_________________________</Typography>
           ) : (
-            <Typography variant="body1">{randomText}</Typography>
+            <Typography variant="body1">{randomText}
+            <hr />
+            </Typography>
           )}
         </DialogContent>
       </BootstrapDialog>
