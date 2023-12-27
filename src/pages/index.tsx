@@ -25,12 +25,12 @@ const RedirectPage: React.FC = () => {
     <div className='flex flex-col items-center justify-center m-20'>
       <SnowfallComponent />
       <div className="">
-        <h1 className=" text-2xl xl:text-3xl font-bold tracking-widest animate-bounce mb-14">Still with the Christmas spirit...</h1>
+        <h1 className="text-2xlll text-2xll xl:text-3xl font-bold tracking-widest animate-bounce mb-14">Still with the Christmas spirit...</h1>
       </div>
       <div className="flex flex-col m-7">
       </div>
-      <label htmlFor="pageSelect" className='mb-3 text-lg text-cyan-100'>Please select gender</label>
-      <select className='text-xl outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
+      <label htmlFor="pageSelect" className='mb-3 label labell text-cyan-100'>Please select gender</label>
+      <select className='text-xll text-xlll text-xl outline-none bg-black' id="pageSelect" onChange={handlePageChange}>
         <option value="" className=''>Select &hearts;</option>
         <option value="page1">Male</option>
         <option value="page2">Female</option>

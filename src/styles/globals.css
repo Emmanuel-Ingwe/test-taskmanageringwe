@@ -25,3 +25,39 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+body {
+  background: #000;
+}
+
+
+@media only screen and (max-width: 360px) {
+  label {
+    font-size: 12px;
+  }
+  .text-2xll {
+    font-size: 15px;
+}
+.text-xll {
+  font-size: 15px;
+}
+.text-2xll {
+  font-size: 19px;
+}
+
+}
+
+@media only screen and (min-width: 360px) {
+  .labell {
+    font-size: 18px;
+  }
+  .text-2xlll {
+    font-size: 24px;
+}
+.text-xlll {
+  font-size: 20px;
+}
+.text-2xlll {
+  font-size: 24px;
+}
+}
