@@ -20,14 +20,21 @@ function generateRandomText() {
   const texts = [
     "What you're grinding for, you shall get",
     "Release what no longer serves you to make space for magic.",
+    "Release what no longer serves you, like that questionable fashion choice from last year.",
     "Leveling up in life is not a one-time event; it's a daily choice to grow and evolve.",
     "Do not wait for leaders; do it alone, person to person.",
     "Your fortune whispers of new friendships, exciting opportunities, and boundless creativity",
     "Celebrate small victories; they lead to big accomplishments.",
     "Seek joy in the ordinary, and you'll find the extraordinary.",
-    "Missed on those M's this year? well let's get it on the next!",
-    "2 lovely kids comming your way champ!",
-    "Write chapters of resilience, love, and self-discovery."
+    "Your kindness has a ripple effect. Small gestures can create significant impact.",
+    "Missed on those M's this year? Well, let's get it on the next! M&Ms, Mondays, and maybe a Maserati.",
+    "Two lovely kids comming your way champ!",
+    "Radiate positivity, king, and watch how it transforms the world around you.",
+    "Your uniqueness is your strength. Celebrate the qualities that make you, you.",
+    "Nor go cast, you fit no get last chance",
+    "Write chapters of resilience, love, and self-discovery.",
+    "The possibilities are endless, and so is your potential. Dream big!",
+    "Choose what you chase, wisely",
   ];
   const randomIndex = Math.floor(Math.random() * texts.length);
   return texts[randomIndex];

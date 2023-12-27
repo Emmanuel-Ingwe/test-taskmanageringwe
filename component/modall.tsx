@@ -19,12 +19,23 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 function generateRandomText() {
   const texts = [
     "Self wealth? Rich Husband? Looks like you're getting both 👑",
-    "Celebrate the beauty in small victories; they pave the way for grand accomplishments.",
+    "Celebrate the beauty in small victories; they pave the way for grand accomplishments,just like completing three situps",
     "Two precious baby souls are on their way to brighten your world, dear",
+    "Your creativity knows no bounds; expand your mind, let your imagination soar and manifest your dreams.",
+    "Cherish the moments that make your heart smile; they are treasures in disguise.",
+    "Nor go cast, last chance fit no dey",
+    "Your goodness will be repaid in unexpected ways, possibly in the form of surprise snacks appearing when you need them most.",
+    "In a world full of trends, be a timeless classic.",
+    "Unexpected compliments and gestures of kindness will fill your days with smiles. Note: May also induce uncontrollable snorting.",
+    "Your kindness will be repaid in unexpected ways, creating a circle of warmth around you.",
+    "You might just discover the true meaning of 'Netflix and... where did my evening go?'",
+    "Let go of what no longer serves you, like that questionable fashion choice from last year.",
     "Your destiny whispers of new connections, exciting opportunities, and boundless creativity.",
-    "Forge your path without waiting for leaders; your journey is uniquely yours, person to person.",
+    "Do not wait for leaders; do it alone, person to person, especially when it comes to ordering food.",
     "Discover joy in the simplicity of life, and you'll uncover the extraordinary in every moment.",
     "Elevating in life is a continuous choice, a daily dance of growth and blossoming.",
+    "You're not aging; you're just leveling up, gaining more experience points!",
+    
   ];
   const randomIndex = Math.floor(Math.random() * texts.length);
   return texts[randomIndex];
