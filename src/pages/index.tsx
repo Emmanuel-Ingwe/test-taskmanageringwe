@@ -25,7 +25,7 @@ const RedirectPage: React.FC = () => {
     <div className='flex flex-col items-center justify-center m-20'>
       <SnowfallComponent />
       <div className="">
-        <h1 className=" text-3xl font-bold tracking-widest animate-bounce mb-16">Still with the Christmas spirit...</h1>
+        <h1 className=" text-2xl xl:text-3xl font-bold tracking-widest animate-bounce mb-14">Still with the Christmas spirit...</h1>
       </div>
       <div className="flex flex-col m-7">
       </div>
