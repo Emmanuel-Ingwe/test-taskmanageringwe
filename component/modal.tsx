@@ -18,19 +18,19 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 function generateRandomText() {
   const texts = [
-    "What you're grinding for, you shall get",
+    "What you're grinding for, you shall get, even if na garri",
     "Release what no longer serves you to make space for magic.",
     "Release what no longer serves you, like that questionable fashion choice from last year.",
     "Leveling up in life is not a one-time event; it's a daily choice to grow and evolve.",
     "Do not wait for leaders; do it alone, person to person.",
     "Your fortune whispers of new friendships, exciting opportunities, and boundless creativity",
     "Celebrate small victories; they lead to big accomplishments.",
-    "Seek joy in the ordinary, and you'll find the extraordinary.",
+    "Seek joy in the ordinary, and you'll find the extraordinary. Especially in the 'extraordinary' ability to find your phone when it's been in your hand the whole time.",
     "Your kindness has a ripple effect. Small gestures can create significant impact.",
     "Missed on those M's this year? Well, let's get it on the next! M&Ms, Mondays, and maybe a Maserati.",
     "Two lovely kids comming your way champ!",
     "Radiate positivity, king, and watch how it transforms the world around you.",
-    "Your uniqueness is your strength. Celebrate the qualities that make you, you.",
+    "Your uniqueness is your strength. Celebrate the qualities that make you, you. Embrace the weirdness—it's what makes you a rare species in the human zoo.",
     "Nor go cast, you fit no get last chance",
     "Write chapters of resilience, love, and self-discovery.",
     "The possibilities are endless, and so is your potential. Dream big!",
