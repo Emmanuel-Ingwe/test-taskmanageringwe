@@ -44,22 +44,22 @@ const RedirectPage: React.FC = () => {
 export default RedirectPage;
 
 
-const [todo, setTodo] = useState<string[]>([])
-const [inputValue, setInputValue] = useState("")
+// const [todo, setTodo] = useState<string[]>([])
+// const [inputValue, setInputValue] = useState("")
 
 
-const handleAddTodo = () => {
-  setTodo([...todo, inputValue])
-  setInputValue("")
-}
+// const handleAddTodo = () => {
+//   setTodo([...todo, inputValue])
+//   setInputValue("")
+// }
 
-const handleSetInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
-  setInputValue(event.target.value)
-}
+// const handleSetInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
+//   setInputValue(event.target.value)
+// }
 
-const deleteTodo = (index:number) => {
-  const newTodo = [...todo.slice(0, index), ...todo.slice(index + 1)]
-}
+// const deleteTodo = (index:number) => {
+//   const newTodo = [...todo.slice(0, index), ...todo.slice(index + 1)]
+// }
 
 
 
