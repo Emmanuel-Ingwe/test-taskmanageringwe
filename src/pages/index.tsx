@@ -1,6 +1,7 @@
 import { useState, ChangeEvent } from 'react';
 import Link from 'next/link';
 import SnowfallComponent from '../../component/snowflake'
+import Form from '../../component/form'
 
 
 const RedirectPage: React.FC = () => {
@@ -37,6 +38,8 @@ const RedirectPage: React.FC = () => {
         <option value="pagee">Not here?</option>
       </select>
       <h1 className='mt-3 text-xl font-bold underline text-red-300 hover:text-red-800'>{redirectToPage()}</h1>
+
+      <Form />
     </div>
   );
 };
