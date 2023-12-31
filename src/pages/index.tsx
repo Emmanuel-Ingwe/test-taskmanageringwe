@@ -62,10 +62,6 @@ export default RedirectPage;
 // }
 
 
-
-
-
-
 // const [todos, setTodos] = useState<string[]>([""])
 // const [inputValue, setInputValue] = useState("")
 
