@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 
 
 type FormData = {
-  firstName: string
+  firstName: boolean,
   lastName: string
 }
 
@@ -30,7 +30,6 @@ export default function App() {
         onClick={() => {
           setValue("lastName", "luo") // ✅
           setValue("firstName", true) // ❌: true is not string
-          errors.bill // ❌: property bill does not exist
         }}
       >
         SetValue
