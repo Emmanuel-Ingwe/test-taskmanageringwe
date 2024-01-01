@@ -32,7 +32,7 @@ export default function App() {
           setValue("firstName", true) // ❌: true is not string
         }}
       >
-        SetValue
+        submit
       </button>
     </form>
   )
