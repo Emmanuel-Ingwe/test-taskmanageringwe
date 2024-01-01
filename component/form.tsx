@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useForm } from "react-hook-form"  npm install react-hook-form
+import { useForm } from "react-hook-form" 
 
 
 type FormData = {
