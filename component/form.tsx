@@ -33,7 +33,7 @@ export default function App() {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit) } className="flex flex-col">
       {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue={inputValue} {...register("example")} />
+      <input defaultValue={inputValue} {...register("example")} className="p2 text-cyan-950"/>
 
 
       {/* include validation with required or other standard HTML validation rules */}
