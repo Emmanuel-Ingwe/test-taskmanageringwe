@@ -21,7 +21,6 @@ export default function App() {
   const [inputValue, setInputValue] = useState("")
 
   const handleInputs = () => {
-    handleSubmit
     setInputValue("")
   }
 
@@ -39,10 +38,10 @@ export default function App() {
       {/* include validation with required or other standard HTML validation rules */}
       <input {...register("exampleRequired", { required: true })} className="p2 bg-black"/>
       {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span className="text-red-600 text-xs">This field is required</span>}
+      {errors.exampleRequired && <span className="text-red-600 bg-red-900 text-xs">This field is required</span>}
 
 
-      <input type="submit" onClick={handleInputs}/>
+      <button type="submit" onClick={handleInputs}>ss</button>
     </form> 
   )
 }
