@@ -37,7 +37,7 @@ export default function App() {
 
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
+      <input {...register("exampleRequired", { required: true })} className="p2 text-cyan-950" />
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
 
