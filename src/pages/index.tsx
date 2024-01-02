@@ -39,7 +39,7 @@ const RedirectPage: React.FC = () => {
       </select>
       <h1 className='mt-3 text-xl font-bold underline text-red-300 hover:text-red-800'>{redirectToPage()}</h1>
 
-      {/* <Form /> */}
+      <Form />
     </div>
   );
 };
