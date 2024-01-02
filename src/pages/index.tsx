@@ -39,7 +39,7 @@ const RedirectPage: React.FC = () => {
       </select>
       <h1 className='mt-3 text-xl font-bold underline text-red-300 hover:text-red-800'>{redirectToPage()}</h1>
 
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 };
@@ -65,7 +65,18 @@ export default RedirectPage;
 // }
 
 
-// const [todos, setTodos] = useState<string[]>([""])
+
+// {todos.map((todo, index) => (
+//   <li></li>
+// ))}
+
+
+// import React from 'react'
+// import { useState } from 'react'
+
+
+// const index = () => {
+//   const [todos, setTodos] = useState<string[]>([])
 // const [inputValue, setInputValue] = useState("")
 
 // const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
@@ -82,6 +93,23 @@ export default RedirectPage;
 //   setTodos(newTodos)
 // }
 
-// {todos.map((todo, index) => (
-//   <li></li>
-// ))}
+
+
+//   return (
+//     <div>
+//         <input value={inputValue} onChange={handleInputValue} type="text" className='bg-black' />
+
+//         <input type='submit' onClick={handleAddTodo}/>
+
+//         <ul>
+//         {todos.map((todo, index) => (
+//           <li key={index}>{todo}
+//           <button onClick={() => (deleteTodo(index))}>del</button>
+//           </li>
+//           ))}
+//         </ul>
+//     </div>
+//   )
+// }
+
+// export default index
