@@ -20,6 +20,11 @@ export default function App() {
 
   const [inputValue, setInputValue] = useState("")
 
+  const handleInputs = () => {
+    handleSubmit
+    setInputValue("")
+  }
+
 
   console.log(watch("example")) // watch input value by passing the name of it
 
@@ -28,7 +33,7 @@ export default function App() {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit) }>
       {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="" {...register("example")} />
+      <input defaultValue={inputValue} {...register("example")} />
 
 
       {/* include validation with required or other standard HTML validation rules */}
@@ -37,7 +42,7 @@ export default function App() {
       {errors.exampleRequired && <span>This field is required</span>}
 
 
-      <input type="submit" />
+      <input type="submit" onClick={handleInputs}/>
     </form>
   )
 }
