@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit) }>
+    <form onSubmit={handleSubmit(onSubmit) } className="flex">
       {/* register your input into the hook by invoking the "register" function */}
       <input defaultValue={inputValue} {...register("example")} />
 
