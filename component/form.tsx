@@ -41,7 +41,7 @@ export default function App() {
       {errors.exampleRequired && <span className="text-red-600 bg-red-900 text-xs">This field is required</span>}
 
 
-      <button type="submit" onClick={handleInputs}>ss</button>
+      <button type="submit">ss</button>
     </form> 
   )
 }
