@@ -20,10 +20,6 @@ export default function App() {
 
   const [inputValue, setInputValue] = useState("")
 
-  const handleInputs = () => {
-    setInputValue("")
-  }
-
 
   console.log(watch("example")) // watch input value by passing the name of it
 
