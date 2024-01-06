@@ -30,7 +30,7 @@ return (
   
           <ul>
           {todos.map((todo, index) => (
-            <li className='pr-5' key={index}>{todo}
+            <li className='flex items-center justify-between w-[100px]' key={index}>{todo}
             <button onClick={() => (deleteTodo(index))}>del</button>
             </li>
             ))} 
