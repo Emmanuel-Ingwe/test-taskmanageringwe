@@ -18,7 +18,7 @@ const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
 }
 
 const deleteTodo = (index:number) => {
-  const newTodo = [...todos.slice(1, index), ...todos.slice(index +1)]
+  const newTodo = [...todos.slice(0, index), ...todos.slice(index +1)]
   setTodos(newTodo)
 }
 
