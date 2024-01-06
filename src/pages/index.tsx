@@ -6,7 +6,7 @@ import Form from '../../component/form'
 
 const RedirectPage: React.FC = () => {
 
-  
+
   const [selectedPage, setSelectedPage] = useState<string>('');
 
 const handlePageChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -87,72 +87,3 @@ setSelectedPage(event.target.value);
 //   }
   
 //   export default RedirectPage
-
-
-
-// const [todo, setTodo] = useState<string[]>([])
-// const [inputValue, setInputValue] = useState("")
-
-
-// const handleAddTodo = () => {
-//   setTodo([...todo, inputValue])
-//   setInputValue("")
-// }
-
-// const handleSetInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
-//   setInputValue(event.target.value)
-// }
-
-// const deleteTodo = (index:number) => {
-//   const newTodo = [...todo.slice(0, index), ...todo.slice(index + 1)]
-// }
-
-
-
-// {todos.map((todo, index) => (
-//   <li></li>
-// ))}
-
-
-// import React from 'react'
-// import { useState } from 'react'
-
-
-// const index = () => {
-//   const [todos, setTodos] = useState<string[]>([])
-// const [inputValue, setInputValue] = useState("")
-
-// const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
-//   setInputValue(event.target.value)
-// }
-
-// const handleAddTodo = () => {
-//   setTodos([...todos, inputValue])
-//   setInputValue("")
-// }
-
-// const deleteTodo = (index:number) => {
-//   const newTodos = [...todos.slice(0, index), ...todos.slice(index + 1)]
-//   setTodos(newTodos)
-// }
-
-
-
-//   return (
-//     <div>
-//         <input value={inputValue} onChange={handleInputValue} type="text" className='bg-black' />
-
-//         <input type='submit' onClick={handleAddTodo}/>
-
-//         <ul>
-//         {todos.map((todo, index) => (
-//           <li key={index}>{todo}
-//           <button onClick={() => (deleteTodo(index))}>del</button>
-//           </li>
-//           ))}
-//         </ul>
-//     </div>
-//   )
-// }
-
-// export default index
