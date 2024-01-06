@@ -30,10 +30,10 @@ return (
   
           <ul>
           {todos.map((todo, index) => (
-            <li key={index}>{todo}
+            <li className='pr-5' key={index}>{todo}
             <button onClick={() => (deleteTodo(index))}>del</button>
             </li>
-            ))}
+            ))} 
           </ul>
       </div>
     )
