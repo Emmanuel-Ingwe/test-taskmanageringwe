@@ -5,41 +5,41 @@ import Form from '../../component/form'
 
 
 const RedirectPage: React.FC = () => {
-  const [ todos, setTodos ] = useState<string[]>([])
-const [ inputValue, setInputValue ] = useState("")
+//   const [ todos, setTodos ] = useState<string[]>([])
+// const [ inputValue, setInputValue ] = useState("")
 
-const handleAddTodo = () => {
-  setTodos([...todos, inputValue])
-  setInputValue("")
-}
+// const handleAddTodo = () => {
+//   setTodos([...todos, inputValue])
+//   setInputValue("")
+// }
 
-const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
-  setInputValue(event.target.value)
-}
+// const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
+//   setInputValue(event.target.value)
+// }
 
-const deleteTodo = (index:number) => {
-  const newTodo = [...todos.slice(0, index), ...todos.slice(index +1)]
-  setTodos(newTodo)
-}
+// const deleteTodo = (index:number) => {
+//   const newTodo = [...todos.slice(0, index), ...todos.slice(index +1)]
+//   setTodos(newTodo)
+// }
 
-return (
-      <div>
-          <input value={inputValue} onChange={handleInputValue} type="text" className='bg-black' />
+// return (
+//       <div>
+//           <input value={inputValue} onChange={handleInputValue} type="text" className='bg-black' />
   
-          <input type='submit' onClick={handleAddTodo}/>
+//           <input type='submit' onClick={handleAddTodo}/>
   
-          <ul>
-          {todos.map((todo, index) => (
-            <li className='flex items-center justify-between w-[100px]' key={index}>{todo}
-            <button onClick={() => (deleteTodo(index))}>del</button>
-            </li>
-            ))} 
-          </ul>
-      </div>
-    )
-  }
+//           <ul>
+//           {todos.map((todo, index) => (
+//             <li className='flex items-center justify-between w-[100px]' key={index}>{todo}
+//             <button onClick={() => (deleteTodo(index))}>del</button>
+//             </li>
+//             ))} 
+//           </ul>
+//       </div>
+//     )
+//   }
   
-  export default RedirectPage
+//   export default RedirectPage
   
 //   const [selectedPage, setSelectedPage] = useState<string>('');
 
