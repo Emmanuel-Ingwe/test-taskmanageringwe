@@ -13,7 +13,6 @@ const handlePageChange = (event: ChangeEvent<HTMLSelectElement>) => {
 setSelectedPage(event.target.value);
 };
 
-
     const redirectToPage = () => {
       if (selectedPage) {
         return (
