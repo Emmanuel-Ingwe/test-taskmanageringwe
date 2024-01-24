@@ -105,7 +105,7 @@ const deleteTodo = (index:number) => {
 }
 
 {
-  todos.map((todo, index) => (
+  // todos.map((todo, index) => (
 
-  ))
+  // ))
 }
