@@ -86,3 +86,26 @@ setSelectedPage(event.target.value);
 //   }
   
 //   export default RedirectPage
+
+
+const [ todos, setTodos ] = useState<string[]>([])
+const [inputValue, setInputValue] = useState("")
+
+const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
+  setInputValue(event.target.value)
+}
+const handleAddTodo = () => {
+  setTodos([...todos, inputValue])
+  setInputValue("")
+}
+
+const deleteTodo = (index:number) => {
+  const newTodo = [...todos.slice(0, index), ...todos.slice(index -1)]
+  setTodos(newTodo)
+}
+
+{
+  todos.map((todo, index) => (
+
+  ))
+}
