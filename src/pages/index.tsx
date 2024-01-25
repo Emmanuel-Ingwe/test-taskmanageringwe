@@ -72,7 +72,7 @@ setSelectedPage(event.target.value);
 // const [inputValue, setInputValue] = useState("")
 
 // const handleInputValue = (event:React.ChangeEvent<HTMLInputElement>) => {
-//   setInputValue(event.target.value)
+  // setInputValue(event.target.value)
 // }
 // const handleAddTodo = () => {
 //   setTodos([...todos, inputValue])
@@ -86,6 +86,5 @@ setSelectedPage(event.target.value);
 
 // {
   // todos.map((todo, index) => (
-
 //   // ))
 // }
