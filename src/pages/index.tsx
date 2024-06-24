@@ -48,7 +48,6 @@ setSelectedPage(event.target.value);
   
   export default RedirectPage;
 
-// return (
 //       <div>
 //           <input value={inputValue} onChange={handleInputValue} type="text" className='bg-black' />
   
